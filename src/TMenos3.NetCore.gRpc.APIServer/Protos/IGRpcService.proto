@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "TMenos3.NetCore.gRpc.APIServer.GRpcServices";
+
+package GRpcServices;
+
+service IGRpcService {
+  rpc GetTime (GetTimeRequest) returns (GetTimeResponse);
+}
+
+message GetTimeRequest {
+
+}
+
+message GetTimeResponse {
+  string time = 1;
+}
